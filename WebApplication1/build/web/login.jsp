@@ -1,4 +1,4 @@
-<%@ page import ="java.sql.*" %>
+  <%@ page import ="java.sql.*" %>
 <%
     String user = request.getParameter("user");    
     String pwd = request.getParameter("pass");
@@ -17,3 +17,4 @@
         out.println("Invalid password <a href='index.jsp'>try again</a>");
     }
 %>
+

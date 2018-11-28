@@ -34,10 +34,12 @@
     }
 </style>
 </head>
-<body>
-<h1 class="text-center">CarPool System</h1>
+<body>    
+    <h1 class="text-center">CarPool System </h1>
 <div class="login-form">
     <form action="login.jsp" method="post">
+        <img src="pic_article_carpool.jpg"align="middle">
+        
         <h2 class="text-center">Log in</h2>       
         <div class="form-group">index.jsp
             <input type="text" class="form-control" name="user" placeholder="Username" required="required">
@@ -54,6 +56,8 @@
         </div>        
     </form>
     <p class="text-center"><a href="reg.jsp">Create an Account</a></p>
+    
 </div>
+    
 </body>
 </html>                                		

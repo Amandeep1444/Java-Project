@@ -3,9 +3,8 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import java.sql.*;
 
-public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class welcome_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -42,27 +41,14 @@ public final class registration_jsp extends org.apache.jasper.runtime.HttpJspBas
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write('\n');
-
-    String fname = request.getParameter("fname");
-    String lname = request.getParameter("lname");
-    String email = request.getParameter("email");
-    String user = request.getParameter("user");    
-    String pwd = request.getParameter("pass");    
-    Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/acadview","root", "");
-    Statement st = con.createStatement();
-    //ResultSet rs;
-    int i = st.executeUpdate("insert into members(fname, lname, email, user, pwd) values ('" + fname + "','" + lname + "','" + email + "','" + user + "','" + pwd + "')");
-    if (i > 0) {
-        //session.setAttribute("userid", user);
-        response.sendRedirect("welcome.jsp");
-       // out.print("Registration Successfull!"+"<a href='index.jsp'>Go to Login</a>");
-    } else {
-        response.sendRedirect("index.jsp");
-    }
-
-      out.write('\n');
+      out.write("<html>\n");
+      out.write("<body>\n");
+      out.write("    <img src=\"pic_article_carpool.jpg\" >\n");
+      out.write("Registration is Successful.\n");
+      out.write("Please Login Here <a href='index.jsp'>Go to Login</a>\n");
+      out.write("\n");
+      out.write("</body>\n");
+      out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
